@@ -34,9 +34,12 @@ The goal of this project is not only to build a personal portfolio but also to g
 project-folder/
 │
 ├── index.html
-├── style.css
-├── images/
+├── project1.html
+├── project2.html
 └── README.md
+├── project3.html
+├── about.html
+├── creator.html
 ```
 
 ## Learning Objectives
