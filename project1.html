@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1: Bio Page | CodeCanvas</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f8fafc; color: #0f172a; line-height: 1.5; }
+    .navbar { background: white; padding: 1rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }
+    .nav-container { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+    .logo { font-weight: 800; font-size: 1.6rem; background: linear-gradient(135deg,#2A2F6E,#5B4B8A); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 1.2rem; list-style: none; }
+    .nav-links a { font-weight: 500; padding: 0.5rem 0.8rem; border-radius: 60px; color: #1f2937; transition: 0.2s; }
+    .nav-links a:hover { background: #eef2ff; color: #4f46e5; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.8rem; margin: 1.5rem 0 1rem; }
+    .preview-placeholder { background: linear-gradient(145deg,#e2e8f0,#cbd5e1); border-radius: 1.5rem; padding: 3rem; text-align: center; margin: 1.5rem 0; border: 2px dashed #64748b; color: #1e293b; font-weight: 500; }
+    .card-bg { background: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05); margin: 1.5rem 0; }
+    ul, ol { margin-left: 1.8rem; margin-top: 0.5rem; }
+    li { margin: 0.5rem 0; }
+    .btn { display: inline-block; background: #4f46e5; color: white; padding: 0.6rem 1.4rem; border-radius: 40px; font-weight: 600; margin-top: 1rem; }
+    footer { text-align: center; padding: 2rem; color: #475569; border-top: 1px solid #e2e8f0; margin-top: 3rem; }
+    @media (max-width: 700px) { .nav-container { flex-direction: column; } .nav-links { justify-content: center; } }
+  </style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-container"><div class="logo">◢ CodeCanvas</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="project1.html">Project 1</a></li><li><a href="project2.html">Project 2</a></li><li><a href="project3.html">Project 3</a></li><li><a href="about.html">About</a></li><li><a href="creator.html">Creator</a></li></ul></div></nav>
+<div class="container">
+  <span class="badge" style="background:#e0e7ff; color:#4338ca; padding:0.2rem 1rem; border-radius:30px;">🏁 Beginner Project</span>
+  <h1>📄 Personal Bio Page</h1>
+  <p><strong>Project introduction:</strong> Create your first complete HTML/CSS webpage – a personal bio card that introduces you (or a fictional person) with profile image, about section, hobbies, and social links.</p>
+  
+  <h2>🎯 Learning objectives</h2>
+  <ul><li>Understand basic HTML structure (html, head, body, semantic tags).</li><li>Apply CSS properties: colors, fonts, margins, padding, borders.</li><li>Build a simple two-column layout using Flexbox.</li><li>Add hover effects and basic responsiveness.</li></ul>
+  
+  <h2>🛠️ Skills covered</h2>
+  <ul><li>HTML5: headings, paragraphs, divs, spans, lists, images.</li><li>CSS: selectors, box model, background, border-radius, Flexbox basics.</li><li>Google Fonts integration.</li></ul>
+
+  <div class="preview-placeholder">✨ FINAL PREVIEW IMAGE PLACEHOLDER ✨<br> (Your bio page will look like a modern profile card with a clean avatar, description, and styled buttons)</div>
+
+  <div class="card-bg"><h2>⚡ Challenge section</h2><p>Make your bio page stand out: use custom gradient background, round avatar, and create a "fun fact" section that flips color on hover.</p></div>
+
+  <div class="card-bg"><h2>📝 Student tasks section</h2>
+    <ol><li>Create a new HTML file and link a CSS file.</li><li>Add a header with name + tagline.</li><li>Insert a placeholder image (or Font Awesome icon).</li><li>Write a short bio paragraph.</li><li>List 3 hobbies or skills.</li><li>Add two buttons: "Contact" and "Portfolio".</li><li>Make the page responsive (mobile friendly).</li></ol>
+  </div>
+
+  <div class="card-bg"><h2>💡 Tips section</h2>
+    <ul><li>Use CSS variables for easy theming.</li><li>Always add `alt` text for images.</li><li>Test your page in Chrome DevTools mobile view.</li><li>Don't be afraid to use `border-radius: 999px` for circular avatar.</li></ul>
+  </div>
+  <a href="project2.html" class="btn">Next Project →</a>
+</div>
+<footer>© CodeCanvas — Build with consistency</footer>
+</body>
+</html>

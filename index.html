@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Home | CodeCanvas — Learn HTML & CSS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      background: #fefcff;
+      color: #1a1e2b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* modern typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* navigation */
+    .navbar {
+      background: #ffffff;
+      backdrop-filter: blur(0px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.6rem;
+      background: linear-gradient(135deg, #2A2F6E, #5B4B8A);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      padding: 0.5rem 0.8rem;
+      border-radius: 60px;
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+      color: #1f2937;
+    }
+
+    .nav-links a:hover {
+      background: #f0f2f8;
+      color: #4f46e5;
+    }
+
+    /* main container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* cards, grids */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.5rem;
+      border-radius: 60px;
+      transition: background 0.2s;
+      margin-top: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #4f46e5;
+      color: #4f46e5;
+    }
+
+    .btn-outline:hover {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #3b37b3;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 40px;
+      margin-bottom: 1rem;
+    }
+
+    /* sections */
+    .hero {
+      text-align: center;
+      padding: 2rem 0 2.5rem 0;
+    }
+
+    .project-section {
+      margin-top: 3rem;
+    }
+
+    .preview-placeholder {
+      background: linear-gradient(145deg, #e9eef7, #dce3ef);
+      border-radius: 1.25rem;
+      padding: 3rem 1rem;
+      text-align: center;
+      margin: 1.5rem 0;
+      border: 2px dashed #a5b4fc;
+      color: #2d3a6e;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .skill-list, .tasks-list, .tips-list {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .skill-list li, .tasks-list li, .tips-list li {
+      margin: 0.5rem 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    footer {
+      background: #faf9ff;
+      border-top: 1px solid #e9eaf0;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #5b6e8c;
+      margin-top: 3rem;
+    }
+
+    /* profile card */
+    .profile-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+      margin: 2rem auto;
+      border: 1px solid #edeff8;
+    }
+    .profile-avatar {
+      background: linear-gradient(135deg, #6c5ce7, #a463f5);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    @media (max-width: 720px) {
+      .nav-container {
+        flex-direction: column;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">◢ CodeCanvas</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project1.html">Project 1</a></li>
+      <li><a href="project2.html">Project 2</a></li>
+      <li><a href="project3.html">Project 3</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="creator.html">Creator</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="container">
+  <div class="hero">
+    <span class="badge">✨ learn by building</span>
+    <h1>Master HTML & CSS <br> through real projects</h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">From absolute beginner to confident front-end creator — step‑by‑step challenges, clear tasks & professional guidance.</p>
+    <a href="project1.html" class="btn" style="margin-top: 2rem;">Start your first project →</a>
+  </div>
+  <div class="project-section">
+    <h2>📌 Learning path</h2>
+    <div class="card-grid">
+      <div class="card"><div class="badge">🏁 beginner</div><h3>Personal Bio Page</h3><p>Build your first structured webpage with semantic HTML & styling fundamentals.</p><a href="project1.html" class="btn-outline btn" style="margin-top: 0.5rem;">Explore project →</a></div>
+      <div class="card"><div class="badge">🚀 intermediate beginner</div><h3>Responsive Gallery</h3><p>Master CSS Grid, Flexbox, and media queries to create stunning responsive layouts.</p><a href="project2.html" class="btn-outline btn" style="margin-top: 0.5rem;">Explore project →</a></div>
+      <div class="card"><div class="badge">💡 advanced beginner</div><h3>Modern Form UI</h3><p>Build professional signup forms, advanced pseudo-classes & validation-ready design.</p><a href="project3.html" class="btn-outline btn" style="margin-top: 0.5rem;">Explore project →</a></div>
+    </div>
+  </div>
+</main>
+<footer><p>✧ CodeCanvas — where beginners become creators ✧ <br> Hands‑on HTML/CSS projects, real growth.</p></footer>
+</body>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2: Gallery | CodeCanvas</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f1f5f9; color: #0f172a; line-height: 1.5; }
+    .navbar { background: white; padding: 1rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; }
+    .nav-container { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+    .logo { font-weight: 800; font-size: 1.6rem; background: linear-gradient(135deg,#2A2F6E,#5B4B8A); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 1.2rem; list-style: none; }
+    .nav-links a { font-weight: 500; padding: 0.5rem 0.8rem; border-radius: 60px; color: #1f2937; transition: 0.2s; }
+    .nav-links a:hover { background: #eef2ff; color: #4f46e5; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.8rem; margin: 1.5rem 0 1rem; }
+    .preview-placeholder { background: linear-gradient(145deg,#cbd5e1,#94a3b8); border-radius: 1.5rem; padding: 3rem; text-align: center; margin: 1.5rem 0; border: 2px dashed #334155; }
+    .card-bg { background: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05); margin: 1.5rem 0; }
+    ul, ol { margin-left: 1.8rem; margin-top: 0.5rem; }
+    li { margin: 0.5rem 0; }
+    .btn { display: inline-block; background: #4f46e5; color: white; padding: 0.6rem 1.4rem; border-radius: 40px; font-weight: 600; margin-top: 1rem; text-decoration: none; }
+    .badge { background:#e0e7ff; color:#4338ca; padding:0.2rem 1rem; border-radius:30px; display: inline-block; margin-bottom:1rem; }
+    footer { text-align: center; padding: 2rem; color: #475569; border-top: 1px solid #e2e8f0; margin-top: 3rem; }
+    @media (max-width: 700px) { .nav-container { flex-direction: column; } .nav-links { justify-content: center; } }
+  </style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-container"><div class="logo">◢ CodeCanvas</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="project1.html">Project 1</a></li><li><a href="project2.html">Project 2</a></li><li><a href="project3.html">Project 3</a></li><li><a href="about.html">About</a></li><li><a href="creator.html">Creator</a></li></ul></div></nav>
+<div class="container">
+  <span class="badge">🚀 Intermediate Beginner</span>
+  <h1>🖼️ Responsive Image Gallery</h1>
+  <p><strong>Project introduction:</strong> Build a fully responsive photo gallery that adapts beautifully from desktop to mobile using CSS Grid and Flexbox. Showcase images with captions and smooth hover effects.</p>
+  
+  <h2>🎯 Learning objectives</h2>
+  <ul><li>Implement CSS Grid layout for gallery cards.</li><li>Use object-fit for consistent image sizing.</li><li>Apply media queries to rearrange columns.</li><li>Create interactive hover overlays.</li></ul>
+  
+  <h2>🛠️ Skills covered</h2>
+  <ul><li>CSS Grid & Flexbox combination, responsive units (fr, %, vw).</li><li>Pseudo-classes :hover, transition properties.</li><li>Responsive images and accessibility.</li></ul>
+
+  <div class="preview-placeholder">🖼️ FINAL PREVIEW IMAGE PLACEHOLDER 🖼️<br> (Gallery with 6 cards – 3 columns on desktop, 2 on tablet, 1 on mobile with zoom effect)</div>
+
+  <div class="card-bg"><h2>⚡ Challenge section</h2><p>Add a lightbox feature (JavaScript optional for advanced) or create a “lazy loading” mockup. Make the captions slide up on hover.</p></div>
+
+  <div class="card-bg"><h2>📝 Student tasks section</h2>
+    <ol><li>Create a container with class `.gallery`.</li><li>Add at least 6 image cards (you can use placeholder images via unsplash or local).</li><li>Each card must have an image, a title, and a short description.</li><li>Make the gallery responsive: desktop 3 cols, tablet 2 cols, mobile 1 col.</li><li>Add a hover effect: scale or shadow.</li><li>Ensure images don’t distort.</li></ol>
+  </div>
+
+  <div class="card-bg"><h2>💡 Tips section</h2>
+    <ul><li>Use `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));` for easy responsiveness.</li><li>Set `max-width: 100%; height: auto;` for images.</li><li>Use `transition: transform 0.2s` for smooth scaling.</li><li>Test on real devices or devtools.</li></ul>
+  </div>
+  <a href="project3.html" class="btn">Next Project →</a>
+</div>
+<footer>© CodeCanvas — One project at a time</footer>
+</body>
+</html>
